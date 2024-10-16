@@ -1,4 +1,6 @@
-﻿string newcontact;
+﻿using System;
+
+string newcontact;
 List<string> contacts = new List<string>();
 
 Console.Write("Write the contact to add: ");
@@ -24,3 +26,16 @@ if (contacts.Contains(newcontact))
 {
     Console.WriteLine($"{newcontact} is saved in your contacts.");
 }
+
+Console.Write("Write the contact to delete: ");
+newcontact = Console.ReadLine();
+if (contacts.Contains(newcontact))
+{
+    contacts.Remove(newcontact);
+    Console.WriteLine("The contact was deleted succesfully.");
+}
+else
+{
+    Console.WriteLine("You don't have this contact!");
+}
+

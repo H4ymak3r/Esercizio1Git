@@ -1,21 +1,20 @@
 ﻿List<string> contacts = new List<string> { };
-Console.WriteLine($"Welcome to the contact manager!");
-Console.Write($"Insert one of the following numbers:\n" +
-    $"1 - Add a contact\n" +
-    $"2 - View contacts\n" +
-    $"3 - Contact Searcher\n" +
-    $"4 - Delete a contact\n");
-int action = Console.Read();
-
-
 string newcontact;
 string YesNo;
+int action;
 bool exitcheck = true;
-
-
 
 while (exitcheck)
 {
+    Console.WriteLine($"Welcome to the contact manager!");
+    Console.Write($"Insert one of the following numbers:\n" +
+        $"1 - Add a contact\n" +
+        $"2 - View contacts\n" +
+        $"3 - Contact Searcher\n" +
+        $"4 - Delete a contact\n");
+    action = int.Parse(Console.ReadLine());
+
+
     if (action == 1)
     {
         Console.Write("Write the contact to add: ");
@@ -69,5 +68,7 @@ while (exitcheck)
     {
         exitcheck = false;
     }
+
+    Console.Clear();
 
 }

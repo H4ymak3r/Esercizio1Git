@@ -1,15 +1,14 @@
-﻿List<string> contatti = new List<string> {};
-Console.Write("Scrivi il contatto per aggiungerlo o rimuoverlo: ");
-string newcontact = Console.ReadLine();
-int control = 0;
-if (!contatti.Contains(newcontact))
-{
-    contatti.Add(newcontact);
-}
+﻿string newcontact;
+List<string> contacts = new List<string>();
 
-Console.WriteLine("I contatti sono: ");
-
-foreach  (string contact in contatti)
-{
-    Console.Write($"{contact} ");
-}
+Console.Write("Write the contact to add: ");
+newcontact = Console.ReadLine();
+    if (!contacts.Contains(newcontact))
+    {
+        contacts.Add(newcontact);
+    }
+    else
+    {
+        Console.WriteLine("You already have this contact!");
+    }
+  

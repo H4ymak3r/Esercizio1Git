@@ -11,4 +11,9 @@ newcontact = Console.ReadLine();
     {
         Console.WriteLine("You already have this contact!");
     }
-  
+
+Console.Write("Your contacts: ");
+foreach (string contact in contacts)
+{
+    Console.Write($"{contact} ");
+}
